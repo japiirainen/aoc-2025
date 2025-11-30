@@ -32,7 +32,7 @@
             ++ (with pkgs; [
               (writeScriptBin "aoc" "${pkgs.python}/bin/python solve.py < input.txt")
               (writeScriptBin "aot" "${pkgs.python}/bin/python solve.py < sample.txt")
-              (writeScriptBin "get" "${pkgs.python}/bin/python bin/get_input.py --day $1")
+              (writeScriptBin "get" "${pkgs.python}/bin/python get_input.py --day $1")
             ]);
 
           shellHook = with pkgs; ''

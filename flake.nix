@@ -9,7 +9,7 @@
     flake-utils.lib.eachDefaultSystem (
       system:
       let
-        overlays = [ (_: super: { python = super.python315; }) ];
+        overlays = [ (_: super: { python = super.python313; }) ];
         pkgs = import nixpkgs { inherit overlays system; };
       in
       {
@@ -28,6 +28,7 @@
               requests
               parse
               networkx
+              shapely
             ])
             ++ (with pkgs; [
               (writeScriptBin "aoc" "${pkgs.python}/bin/python solve.py < input.txt")

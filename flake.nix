@@ -29,6 +29,7 @@
               parse
               networkx
               shapely
+              scipy
             ])
             ++ (with pkgs; [
               (writeScriptBin "aoc" "${pkgs.python}/bin/python solve.py < input.txt")
